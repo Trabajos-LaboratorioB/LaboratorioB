@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+    <!-- Bootstrap Core CSS -->
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- MetisMenu CSS -->
+    <link href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script type="text/javascript" src="../js/rexamenes.js"></script>
+
+    <link rel="stylesheet" href="../alertify/themes/alertify.core.css" />
+  <link rel="stylesheet" href="../alertify/themes/alertify.bootstrap.css" id="toggleCSS" />
+    <script src="../alertify/lib/alertify.min.js"></script>
+  <title>Labiomed</title>
+</head>
+
+<body>
+  <header:>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="panel panel-default">
+            <div class="panel-heading" align="center">
+              <h1>
+              Registro de Examenes
+            </h1>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <form action="" id="registro">
+                  <div class="form-group col-lg-4">
+                    <label for="nombre">Nombre del Examen:</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Nombre del Examen">
+                  </div>
+                  <div class="form-group col-lg-4">
+                    <label for="tipo">Tipo de Examen:</label>
+                    <select class="form-control" name="" id="tipo">
+                      <option value="Drogas">Drogas</option>
+                      <option value="Heces">Heces</option>
+                      <option value="Hematologicos">Hematologicos</option>
+                      <option value="Hormonas">Hormonas</option>
+                      <option value="Marcadores Tumorales">Marcadores Tumorales</option>
+                      <option value="Orinas">Orinas</option>
+                      <option value="Otros">Otros</option>
+                      <option value="Quimica">Quimica</option>
+                      <option value="Quimica I">Quimica I</option>
+                      <option value="Quimica II">Quimica II</option>
+                      <option value="Sexuales">Sexuales</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-lg-4">
+                    <label for="precio">Precio:</label>
+                    <input type="text" class="form-control" id="precio" placeholder="Precio">
+                  </div>
+                  <div class="col-lg-12" align="center">
+                    <button type="submit" class="btn btn-primary">Registrar</button>
+                    <button type="reset" class="btn btn-secundary">Cancelar</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </header:>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <link href="../datepicker/css/datepicker.css" rel="stylesheet">
+  <script type="text/javascript" src="../datepicker/js/bootstrap-datepicker.js"></script>
+
+  <script type="text/javascript" src="../js/pacientes.js"></script>
+
+  <title>Editar Pacientes</title>
+</head>
+<body>
+<br>
+<div id="alerta"></div>
+  <div class="panel panel-primary">
+    <div class=" panel-heading">
+      Editar Pacientes
+    </div>
+
+    <br>
+<div class="panel-body">
+    <form id="editarPac" role="form">
+      <div class=" col-md-12">
+        <div class="form-group">
+          <label class="control-label" for="paciente_id">ID del Paciente:</label>
+          <!-- <input type="hidden" id="Pac_ID" name="Pac_ID"> -->
+          <!-- Id del Paciente: -->
+          <input required disabled class="form-control" type="text" name="paciente_id" id="paciente_id">
+          <!-- <label id="paciente_id"></label> -->
+          </div>
+
+          <div class="form-group">
+            <!-- Nombre: -->
+            <label class="control-label" for="nombre_pac">Nombre:</label>
+            <input required class="form-control" type="text" name="nombre_pac" id="nombre_pac">
+            <!-- <label id="nombre_pac"></label> -->
+          </div>
+          <div class="form-group">
+            <label class="control-label" for="cedula_pac">Cedula:</label>
+            <div class="input-group">
+                <select class="form-control" id="cedula_pacnac" required>
+                  <option value="V">V</option>
+                  <option value="E">E</option>
+                  <option value="J">J</option>
+                  <option value="G">G</option>
+                </select>
+                  <div class="input-group-addon">-</div>
+                  <input type="text" class="form-control" name="cedula_pac" id="cedula_pac" >
+            </div>
+            <!-- <label class="control-label" for="cedula_pac">Cedula:</label> -->
+            <!-- <input required class="form-control" type="text" name="cedula_pac" id="cedula_pac"> -->
+            <!-- Cedula: -->
+            <!-- <label id="cedula_pac"></label> -->
+          </div>
+          <div class="form-group">
+            <label class="control-label" for="direccion_pac">Direccioon:</label>
+            <input required class="form-control" type="text" name="direccion_pac" id="direccion_pac">
+            <!-- Direccion: -->
+            <!-- <label id="direccion_pac"></label> -->
+          </div>
+          <div class="form-group">
+          <label class="control-label" for="fechanac_pac">Fecha de Nacimiento:</label>
+              <!-- <div class='input-group date' id='datetimepicker1'>
+                <span class="input-group-addon">
+                  <span class="glyphicon glyphicon-calendar"></span>
+                </span> -->
+                  <input required type='text' class="datepicker form-control" name="fechanac_pac" id="fechanac_pac" />
+              <!-- </div> -->
+
+                  <script type="text/javascript">
+                      $(function () {
+                        $('.datepicker').datepicker({
+                            format: 'yyyy-mm-dd'
+                          });
+                      });
+                  </script>
+            <!-- <label class="control-label" for="fechanac_pac">Fecha de Nacimiento:</label> -->
+            <!-- <input required class="form-control" type="text" name="fechanac_pac" id="fechanac_pac"> -->
+            <!-- Fecha de Nacimiento: -->
+           <!-- <label id="fechanac_pac"></label> -->
+          </div>
+          <div class="form-group">
+            <label class="control-label" for="telcel_pac">Teleefono:</label>
+            <input required class="form-control" type="text" name="telcel_pac" id="telcel_pac">
+            <!-- Telefono: -->
+           <!-- <label id="telcel_pac"></label> -->
+          </div>
+          <div align="center" class="form-group">
+            <button type="button" class="ActPac btn btn-success">Actualizar</button>
+            <!-- <button type="reset" class="btn btn-primary">Limpiar</button> -->
+          </div>
+        </div>
+      </div>
+    </form>
+
+</div>
+
+  </div>
+
+</body>
+</html>

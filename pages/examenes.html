@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+
+
+
+  <script type="text/javascript" src="../js/examenes.js"></script>
+
+  <title>Editar Examenes</title>
+</head>
+<body>
+<br>
+<div id="alerta"></div>
+  <div class="panel panel-primary">
+    <div class=" panel-heading">
+      Editar Examenes
+    </div>
+
+    <br>
+<div class="panel-body">
+    <form id="editarExa" role="form">
+      <div class=" col-md-12">
+        <div class="form-group">
+          <label class="control-label" for="examen_id">ID del Examen:</label>
+          <!-- <input type="hidden" id="Pac_ID" name="Pac_ID"> -->
+          <!-- Id del Paciente: -->
+          <input required disabled class="form-control" type="text" name="examen_id" id="examen_id">
+          <!-- <label id="paciente_id"></label> -->
+          </div>
+
+          <div class="form-group">
+            <!-- Nombre: -->
+            <label class="control-label" for="descripcion_exa">Descripcion:</label>
+            <input required class="form-control" type="text" name="descripcion_exa" id="descripcion_exa">
+            <!-- <label id="nombre_pac"></label> -->
+          </div>
+
+          <div class="form-group">
+            <!-- Nombre: -->
+            <label class="control-label" for="precio_exa">Precio:</label>
+            <input required class="form-control" type="text" name="precio_exa" id="precio_exa">
+            <!-- <label id="nombre_pac"></label> -->
+          </div>
+
+          <div class="form-group">
+            <!-- Nombre: -->
+            <label class="control-label" for="tipo_exa">Tipo:</label>
+            <input required class="form-control" type="text" name="tipo_exa" id="tipo_exa">
+            <!-- <label id="nombre_pac"></label> -->
+          </div>
+
+          <div align="center" class="form-group">
+            <button type="button" class="ActExa btn btn-success">Actualizar</button>
+            <!-- <button type="reset" class="btn btn-primary">Limpiar</button> -->
+          </div>
+        </div>
+      </div>
+    </form>
+
+</div>
+
+  </div>
+
+</body>
+</html>
