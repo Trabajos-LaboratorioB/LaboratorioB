@@ -45,7 +45,7 @@ $fecha = $dato['fecha'];
                 <input type="hidden" name="paciente_id" id="paciente_id">
               <input required  placeholder="N° de Cedula" size="50px" type="text" class="form-control  span3" data-provide="typeahead" id="bpacientes" name="bpacientes" >
               <span class="input-group-btn">
-                <button id="limpiarpac" class="btn btn-default" type="button"><i class="fa fa-trash-o"></i>
+                <button id="limpiarpac" class="btn btn-success" type="button"><i class="fa fa-trash-o"></i>
               </span>
             </div>
           </div>
