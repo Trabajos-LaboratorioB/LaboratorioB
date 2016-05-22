@@ -79,6 +79,7 @@ switch($page){
 			$orden_id = $datosultimaorden['ultima_orden'];
 			$empresa_id = 1;
 			$paciente_id = $_POST['paciente_id'];
+			$medico_id = $_POST['medico_id'];
 			$fecha_ord = $_POST['fecha_ord'];
 			$urgente_ord = $_POST['urgente_ord'];
 			$observaciones_ord = $_POST['observaciones_ord'];
@@ -87,10 +88,10 @@ switch($page){
 			$total_ord = $_POST['total_ord'];
 
 
-			if (count($_SESSION['detalle'])>0 && $_POST['total_ord']!='' && $_POST['paciente_id']!='') {
+			if (count($_SESSION['detalle'])>0 && $_POST['total_ord']!='' && $_POST['paciente_id']!='' && $_POST['medico_id']!='') {
 				try {
 
-					$sqlorden="INSERT INTO ordenes (orden_id,empresa_id,fk_paciente_id,fecha_ord,urgente_ord,observaciones_ord,estado_ord,total_ord) values ($orden_id, $empresa_id,$paciente_id, '$fecha_ord','$urgente_ord','$observaciones_ord','$estado_ord','$total_ord');";
+					$sqlorden="INSERT INTO ordenes (orden_id,empresa_id,fk_paciente_id,fk_medico_id,fecha_ord,urgente_ord,observaciones_ord,estado_ord,total_ord) values ($orden_id, $empresa_id,$paciente_id,$medico_id, '$fecha_ord','$urgente_ord','$observaciones_ord','$estado_ord','$total_ord');";
 					$queryorden= mysqli_query($conexion, $sqlorden);
 
 					foreach($_SESSION['detalle'] as $detalle):

@@ -31,7 +31,7 @@ AND a.orden_id = '$orden_id'";
                      <td>'.$row["ordendet_id"].'</td>
                      <td>'.$row["examen_id"].'</td>
                      <td>'.$row["descripcion_exa"].'</td>
-                     <td class="resultadoexa_ordet" data-id1="'.$row["ordendet_id"].'">'.$row["resultadoexa_ordet"].'</td>
+                     <td class="resultadoexa_ordet" data-id1="'.$row["ordendet_id"].'" contenteditable>'.$row["resultadoexa_ordet"].'</td>
                 </tr>
            ';
       }

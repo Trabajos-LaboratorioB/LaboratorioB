@@ -7,6 +7,9 @@ $(document).ready(function(){
         $('#telefono_pac').text('');
         $('#direccion_pac').text('');
         $('#observaciones_ord').val('');
+        $('#bmedicos').val('');
+        $('#paciente_id').val('');
+        $('#medico_id').val('');
       });
 
       // limpia los datos del cliente
@@ -36,28 +39,27 @@ $(document).ready(function(){
           }else {
 
 
-            alertify.error('El Pasientes no Existe o el Campo esta Vacio!!');
+            alertify.error('El Pasiente no Existe o el Campo esta Vacio!!');
           }
         }
       );
 
       });
 
-      $('#bclientes').focusout(function(){
-        var rif = $('#bclientes').val();
-        $.post('../php/getCliente.php',{
-          rif: rif
+      $('#bmedicos').focusout(function(){
+        var nombre_med = $('#bmedicos').val();
+        $.post('../php/getMedico.php',{
+          nombre_med: nombre_med
         },
 
         function(resServer){
 
           if(resServer.res === 'true'){
-            $('#rif_cli').text(resServer[0].rif_cli);
-            $('#nombre_cli').text(resServer[0].nombre_cli);
-            $('#telefono_cli').text(resServer[0].telefono_cli);
-            $('#cliente_id').val(resServer[0].cliente_id);
+            $('#medico_id').val(resServer[0].medico_id);
+            $('#nombre_med').val(resServer[0].nombre_med);
+
           }else {
-            alert('Debe Registrar al Cliente...');
+            alertify.error('El Medico no existe o el Campo esta Vacio!!');
           }
         }
       );
@@ -69,6 +71,10 @@ $(document).ready(function(){
       });
       $.post('../php/autocompleta_pac.php', function(data){
         $('#bpacientes').attr('data-source',data);
+      });
+
+      $.post('../php/autocompleta_med.php', function(data){
+        $('#bmedicos').attr('data-source',data);
       });
 
       $('#addpac').click(function() {

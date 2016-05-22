@@ -50,33 +50,39 @@ $fecha = $dato['fecha'];
             </div>
           </div>
 
-            <div class="col-lg-3">
+          <div class="col-lg-6">
 
+            <label>Buscar Medico:</label>
+              <div class="form-group input-group">
+                  <input type="hidden" name="medico_id" id="medico_id">
+                <input required  placeholder="Nombre del medico" size="100%" type="text" class="form-control  span3" data-provide="typeahead" id="bmedicos" name="bmedicos" >
 
-            <label>Fecha de la Orden:</label>
-              <div class="form-group">
-
-                  <input value="<?php echo $fecha?>" class="form-control" type="date" name="fecha_ord" id="fecha_ord">
-
-                </div>
               </div>
+            </div>
 
-                <!-- <input type="text" class="datepicker form-control" id="fecha_ord" name="fecha_ord" >
-                <script type="text/javascript">
-                    $(function() {
-                      $('.datepicker').datepicker({
-                          format: 'yyyy-mm-dd'
-                        });
-                    });
-                </script> -->
-                  <div class="col-lg-3">
-                    <label>Prioridad</label>
-                  <select class="form-control" name="urgente_ord" id="urgente_ord">
-                    <option value="Normal">Normal</option>
-                    <option value="Urgente">Urgente</option>
-                  </select>
-                </div>
 
+
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6">
+
+
+    <label>Fecha de la Orden:</label>
+      <div class="form-group">
+
+          <input value="<?php echo $fecha?>" class="form-control" type="date" name="fecha_ord" id="fecha_ord">
+
+        </div>
+      </div>
+
+          <div class="col-lg-6">
+            <label>Prioridad</label>
+          <select class="form-control" name="urgente_ord" id="urgente_ord">
+            <option value="Normal">Normal</option>
+            <option value="Urgente">Urgente</option>
+          </select>
+        </div>
   </div>
 
 <div class="row">
@@ -117,7 +123,7 @@ $fecha = $dato['fecha'];
                 </div>
                 <!-- /.panel-heading -->
                 <div class="panel-body">
-                  <textarea class="form-control" name="observaciones_ord" id="observaciones_ord" rows="3" cols="50"></textarea>
+                  <textarea class="form-control" name="observaciones_ord" id="observaciones_ord" rows="3" cols="100"></textarea>
 
                 </div>
                 <!-- /.panel-body -->

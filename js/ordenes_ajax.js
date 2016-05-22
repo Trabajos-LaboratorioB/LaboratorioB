@@ -47,6 +47,7 @@ $(function(){
 	$(".guardar-orden").off("click");
 	$(".guardar-orden").on("click", function(e) {
 		var paciente_id = $('#paciente_id').val();
+		var medico_id = $('#medico_id').val();
 		var fecha_ord =  $('#fecha_ord').val();
 		var urgente_ord =  $('#urgente_ord').val();
 		var observaciones_ord =  $('#observaciones_ord').val();
@@ -55,12 +56,13 @@ $(function(){
 		$.ajax({
 			url: '../php/Controlador/OrdenController.php?page=3',
 			type: 'post',
-			data: {'paciente_id':paciente_id,'fecha_ord':fecha_ord,'urgente_ord':urgente_ord,'observaciones_ord':observaciones_ord,'total_ord':total_ord},
+			data: {'paciente_id':paciente_id,'medico_id':medico_id,'fecha_ord':fecha_ord,'urgente_ord':urgente_ord,'observaciones_ord':observaciones_ord,'total_ord':total_ord},
 			dataType: 'json'
 		}).done(function(data){
 			if(data.success==true){
 				$("#nom_exa").val('');
 				$('#bpacientes').val('');
+				$('#bmedicos').val('');
 				$('#nombre_pac').text('');
 				$('#telefono_pac').text('');
 				$('#direccion_pac').text('');
