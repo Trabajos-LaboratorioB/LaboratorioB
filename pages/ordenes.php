@@ -40,10 +40,10 @@ $fecha = $dato['fecha'];
     <div class="row">
         <div class="col-lg-6">
 
-          <label>Buscar Paciente:</label>
+          <!-- <label>Buscar Paciente:</label> -->
             <div class="form-group input-group">
                 <input type="hidden" name="paciente_id" id="paciente_id">
-              <input required  placeholder="N° de Cedula" size="50px" type="text" class="form-control  span3" data-provide="typeahead" id="bpacientes" name="bpacientes" >
+              <input required  placeholder="Buscar Pacientes | Ingrese numero de cedula" size="50px" type="text" class="form-control  span3" data-provide="typeahead" id="bpacientes" name="bpacientes" >
               <span class="input-group-btn">
                 <button id="limpiarpac" class="btn btn-success" type="button"><i class="fa fa-trash-o"></i>
               </span>
@@ -52,10 +52,10 @@ $fecha = $dato['fecha'];
 
           <div class="col-lg-6">
 
-            <label>Buscar Medico:</label>
+            <!-- <label>Buscar Medico:</label> -->
               <div class="form-group input-group">
                   <input type="hidden" name="medico_id" id="medico_id">
-                <input required  placeholder="Nombre del medico" size="100%" type="text" class="form-control  span3" data-provide="typeahead" id="bmedicos" name="bmedicos" >
+                <input required  placeholder="Buscar Medicos | Ingrese nombre del Medico" size="100%" type="text" class="form-control  span3" data-provide="typeahead" id="bmedicos" name="bmedicos" >
 
               </div>
             </div>
@@ -123,7 +123,7 @@ $fecha = $dato['fecha'];
                 </div>
                 <!-- /.panel-heading -->
                 <div class="panel-body">
-                  <textarea class="form-control" name="observaciones_ord" id="observaciones_ord" rows="3" cols="100"></textarea>
+                  <textarea class="form-control" name="observaciones_ord" id="observaciones_ord" rows="2" cols="100"></textarea>
 
                 </div>
                 <!-- /.panel-body -->
@@ -138,17 +138,17 @@ $fecha = $dato['fecha'];
 
 
       <div class="row">
-          <div class="col-md-2">
-            <label>Buscar Examenes: </label>
-          </div>
+
+
           <div class="col-md-6">
 
-            <input class="form-control span3" id="nom_exa" name="nom_exa" data-provide="typeahead" placeholder="Nombre del Examen" size="50px" type="text">
-          </div>
-          <div class="col-md-4">
-            <button type="button" class="btn btn-outline btn-success btn-sm btn-agregar-examen">Agregar Examen <li class="fa fa-plus-square-o "></li></button>
 
-            <button type="button" class="btn btn-outline btn-primary btn-sm btn-agregar-perfil" >Agregar Perfil <li class="fa fa-plus-square-o "></li></button>
+            <input class="form-control span3" id="nom_exa" name="nom_exa" data-provide="typeahead" placeholder="Buscar Examenes" size="50px" type="text">
+          </div>
+          <div class="col-md-6">
+            <button type="button" class="btn btn-outline btn-success btn-sm btn-agregar-examen">Agregar Examen <li class="fa fa-plus"></li></button>
+
+            <!-- <button type="button" class="btn btn-outline btn-primary btn-sm btn-agregar-perfil" >Agregar Perfil <li class="fa fa-plus-square-o "></li></button> -->
           </div>
       </div>
           <br>
@@ -165,7 +165,7 @@ $fecha = $dato['fecha'];
 
 
 <div class="row" align="center">
-  <button type="button" class="btn btn-outline btn-success guardar-orden">Registrar Orden</button>
+  <button type="button" class="btn btn-outline btn-success guardar-orden">Registrar Orden <i class="fa fa-save"></i></button>
 </div>
 
 
